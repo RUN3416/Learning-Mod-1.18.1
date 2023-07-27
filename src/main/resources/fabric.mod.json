@@ -1,0 +1,37 @@
+{
+	"schemaVersion": 1,
+	"id": "mccourse",
+	"version": "${version}",
+	"name": "MCCourse Fabric Mod",
+	"description": "A Mod to learn!",
+	"authors": [
+		"Noah"
+	],
+	"contact": {
+		"homepage": "https://noah.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"icon": "assets/mccourse/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.noah.mccourse.MCCourseMod"
+		],
+		"fabric-datagen": [
+			"net.noah.mccourse.ExampleModDataGenerator"
+		]
+	},
+	"mixins": [
+		"mccourse.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.14.21",
+		"minecraft": "~1.18",
+		"java": ">=17",
+		"fabric": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
