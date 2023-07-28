@@ -10,14 +10,23 @@ import net.minecraft.item.ItemGroup;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 import net.noah.mccourse.MCCourseMod;
+import net.noah.mccourse.item.ModItemGroups;
 
 public class ModBlocks {
 
     public static final Block ORICHALCUM_BLOCK = registerBlock("orichalcum_block",
-            new Block(FabricBlockSettings.of(Material.METAL).strength(6f).requiresTool()),ItemGroup.MISC);
+            new Block(FabricBlockSettings.of(Material.METAL).strength(0.5f).requiresTool()), ModItemGroups.COURSE);
 
     public static final Block ORICHALCUM_ORE = registerBlock("orichalcum_ore",
-            new Block(FabricBlockSettings.of(Material.STONE).strength(4.5f).requiresTool()),ItemGroup.MISC);
+            new Block(FabricBlockSettings.of(Material.STONE).strength(0.1f).requiresTool()), ModItemGroups.COURSE);
+
+    public static final Block DEEPSLATE_ORICHALCUM_ORE = registerBlock("deepslate_orichalcum_ore",
+            new Block(FabricBlockSettings.of(Material.STONE).strength(0.5f).requiresTool()), ModItemGroups.COURSE);
+
+    public static final Block RAW_ORICHALCUM_BLOCK = registerBlock("raw_orichalcum_block",
+            new Block(FabricBlockSettings.of(Material.STONE).strength(0.25f).requiresTool()), ModItemGroups.COURSE);
+
+
 
 
 
