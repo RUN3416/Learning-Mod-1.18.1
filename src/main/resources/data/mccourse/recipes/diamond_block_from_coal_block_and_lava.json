@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "LLL",
+    "L#L",
+    "LLL"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:coal_block"
+    },
+    "L": {
+      "item": "minecraft:lava_bucket"
+    }
+  },
+  "result": {
+    "item": "minecraft:diamond_block"
+  }
+}
