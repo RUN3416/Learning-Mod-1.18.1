@@ -2,17 +2,16 @@ package net.noah.mccourse.block;
 
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
-import net.minecraft.block.Block;
-import net.minecraft.block.Material;
-import net.minecraft.block.SlabBlock;
-import net.minecraft.block.StairsBlock;
+import net.minecraft.block.*;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 import net.noah.mccourse.MCCourseMod;
+import net.noah.mccourse.block.custom.ModPressurePlateBlock;
 import net.noah.mccourse.block.custom.ModStairsBlock;
+import net.noah.mccourse.block.custom.ModStoneButtonBlock;
 import net.noah.mccourse.block.custom.SpeedyBlock;
 import net.noah.mccourse.item.ModItemGroups;
 
@@ -39,6 +38,27 @@ public class ModBlocks {
 
     public static final Block ORICHALCUM_SLAB = registerBlock("orichalcum_slab",
             new SlabBlock(FabricBlockSettings.of(Material.METAL).strength(4.0f).requiresTool()), ModItemGroups.COURSE);
+
+    public static final Block ORICHALCUM_BUTTON = registerBlock("orichalcum_button",
+            new ModStoneButtonBlock(FabricBlockSettings.of(Material.METAL).strength(4.0f).requiresTool()), ModItemGroups.COURSE);
+
+    public static final Block ORICHALCUM_PRESSURE_PLATE = registerBlock("orichalcum_pressure_plate",
+            new ModPressurePlateBlock(PressurePlateBlock.ActivationRule.EVERYTHING,
+                    FabricBlockSettings.of(Material.METAL).strength(4.0f).requiresTool()), ModItemGroups.COURSE);
+
+    public static final Block ORICHALCUM_FENCE = registerBlock("orichalcum_fence",
+            new FenceBlock(FabricBlockSettings.of(Material.METAL).strength(4.0f).requiresTool()), ModItemGroups.COURSE);
+
+    public static final Block ORICHALCUM_FENCE_GATE = registerBlock("orichalcum_fence_gate",
+            new FenceGateBlock(FabricBlockSettings.of(Material.METAL).strength(4.0f).requiresTool()), ModItemGroups.COURSE);
+
+    public static final Block ORICHALCUM_WALL = registerBlock("orichalcum_wall",
+            new WallBlock(FabricBlockSettings.of(Material.METAL).strength(4.0f).requiresTool()), ModItemGroups.COURSE);
+
+
+
+
+
 
     private static Block registerBlock(String name, Block block, ItemGroup group) {
         registerBlockItem(name, block, group);
