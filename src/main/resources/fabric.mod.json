@@ -18,6 +18,10 @@
 		"main": [
 			"net.noah.mccourse.MCCourseMod"
 		],
+
+		"client": [
+			"net.noah.mccourse.MCCourseClient"
+		],
 		"fabric-datagen": [
 			"net.noah.mccourse.ExampleModDataGenerator"
 		]
