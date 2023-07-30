@@ -14,6 +14,7 @@ import net.minecraft.text.TranslatableText;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
+import net.noah.mccourse.util.ModTags;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
@@ -30,11 +31,11 @@ public class DowsingRodItem extends Item {
             PlayerEntity player = context.getPlayer();
             boolean foundBlock = false;
 
-            for(int i = 0; i <= positionClicked.getY(); i++) {
+            for(int i = 0; i <= positionClicked.getY() + 64; i++) {
                 Block blockBelow = context.getWorld().getBlockState(positionClicked.down(i)).getBlock();
 
                 if(isValuableBlock(blockBelow)) {
-                    outputValuableCoordinates(positionClicked, player, blockBelow, positionClicked.getY() - i);
+                    outputValuableCoordinates(positionClicked, player, blockBelow);
                     foundBlock = true;
                     break;
                 }
@@ -61,16 +62,13 @@ public class DowsingRodItem extends Item {
         }
     }
 
-    private static void outputValuableCoordinates(BlockPos blockPos, PlayerEntity player, Block blockBelow, int yFound) {
+    private static void outputValuableCoordinates(BlockPos blockPos, PlayerEntity player, Block blockBelow) {
         player.sendMessage(new LiteralText("Found " + blockBelow.asItem().getName().getString() + " at " +
-                "(" + blockPos.getX() + ", " + yFound + ", " + blockPos.getZ() + ")"), false);
+                "(" + blockPos.getX() + ", " + blockPos.getY() + ", " + blockPos.getZ() + ")"), false);
     }
 
     private boolean isValuableBlock(Block block) {
-        return block == Blocks.COAL_ORE || block == Blocks.DIAMOND_ORE || block == Blocks.DEEPSLATE_DIAMOND_ORE
-                || block == Blocks.DEEPSLATE_GOLD_ORE || block == Blocks.GOLD_ORE
-                || block == Blocks.EMERALD_ORE || block == Blocks.DEEPSLATE_EMERALD_ORE
-                || block == Blocks.IRON_ORE || block == Blocks.DEEPSLATE_IRON_ORE;
+        return ModTags.Blocks.DOWSING_ROD_DETECTABLE_BLOCKS.contains(block);
     }
 
 
