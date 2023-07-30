@@ -5,6 +5,7 @@ import net.minecraft.item.Item;
 import net.noah.mccourse.MCCourseMod;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.util.Identifier;
+import net.noah.mccourse.item.custom.DowsingRodItem;
 
 public class ModItems {
 
@@ -16,6 +17,11 @@ public class ModItems {
 
     public static final Item RAW_ORICHALCUM = registerItem("raw_orichalcum",
             new Item(new FabricItemSettings().group(ModItemGroups.COURSE)));
+
+    public static final Item DOWSING_ROD = registerItem("dowsing_rod",
+            new DowsingRodItem(new FabricItemSettings().group(ModItemGroups.COURSE).maxDamage(32)));
+
+
 
 
 
