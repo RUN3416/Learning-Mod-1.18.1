@@ -24,6 +24,9 @@ public class ModItems {
     public static final Item TURNIP = registerItem("turnip",
             new Item(new FabricItemSettings().group(ModItemGroups.COURSE).food(ModFoodComponents.TURNIP)));
 
+    public static final Item COAL_SLIVER = registerItem("coal_sliver",
+            new Item(new FabricItemSettings().group(ModItemGroups.COURSE)));
+
 
 
 
