@@ -1,10 +1,8 @@
 package net.noah.mccourse.item;
 
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
-import net.minecraft.item.Item;
-import net.minecraft.item.PickaxeItem;
-import net.minecraft.item.ShovelItem;
-import net.minecraft.item.SwordItem;
+import net.minecraft.entity.EquipmentSlot;
+import net.minecraft.item.*;
 import net.noah.mccourse.MCCourseMod;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.util.Identifier;
@@ -12,6 +10,7 @@ import net.noah.mccourse.item.custom.*;
 
 public class ModItems {
 
+    // INGOTS
     public static final Item ORICHALCUM_INGOT = registerItem("orichalcum_ingot",
             new Item(new FabricItemSettings().group(ModItemGroups.COURSE)));
 
@@ -21,15 +20,19 @@ public class ModItems {
     public static final Item RAW_ORICHALCUM = registerItem("raw_orichalcum",
             new Item(new FabricItemSettings().group(ModItemGroups.COURSE)));
 
+    // CUSTOM ITEM
     public static final Item DOWSING_ROD = registerItem("dowsing_rod",
             new DowsingRodItem(new FabricItemSettings().group(ModItemGroups.COURSE).maxDamage(32)));
 
+    // FOOD
     public static final Item TURNIP = registerItem("turnip",
             new Item(new FabricItemSettings().group(ModItemGroups.COURSE).food(ModFoodComponents.TURNIP)));
 
+    // FUEL
     public static final Item COAL_SLIVER = registerItem("coal_sliver",
             new Item(new FabricItemSettings().group(ModItemGroups.COURSE)));
 
+    // TOOLS
     public static final Item ORICHALCUM_PICKAXE = registerItem("orichalcum_pickaxe",
             new ModPickaxeItem(ModToolMaterial.ORICHALCUM, 1, 2f,
                     new FabricItemSettings().group(ModItemGroups.COURSE)));
@@ -52,6 +55,23 @@ public class ModItems {
 
     public static final Item ORICHALCUM_PAXEL = registerItem("orichalcum_paxel",
             new ModPaxelItem(ModToolMaterial.ORICHALCUM, 1, 1f,
+                    new FabricItemSettings().group(ModItemGroups.COURSE)));
+
+    // ARMOR
+    public static final Item ORICHALCUM_HELMET = registerItem("orichalcum_helmet",
+            new ModArmorItem(ModArmorMaterials.ORICHALCUM, EquipmentSlot.HEAD,
+                    new FabricItemSettings().group(ModItemGroups.COURSE)));
+
+    public static final Item ORICHALCUM_CHESTPLATE = registerItem("orichalcum_chestplate",
+            new ArmorItem(ModArmorMaterials.ORICHALCUM, EquipmentSlot.CHEST,
+                    new FabricItemSettings().group(ModItemGroups.COURSE)));
+
+    public static final Item ORICHALCUM_LEGGINGS = registerItem("orichalcum_leggings",
+            new ArmorItem(ModArmorMaterials.ORICHALCUM, EquipmentSlot.LEGS,
+                    new FabricItemSettings().group(ModItemGroups.COURSE)));
+
+    public static final Item ORICHALCUM_BOOTS = registerItem("orichalcum_boots",
+            new ArmorItem(ModArmorMaterials.ORICHALCUM, EquipmentSlot.FEET,
                     new FabricItemSettings().group(ModItemGroups.COURSE)));
 
 
