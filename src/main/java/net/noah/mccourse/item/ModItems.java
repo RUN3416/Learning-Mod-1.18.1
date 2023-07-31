@@ -8,10 +8,7 @@ import net.minecraft.item.SwordItem;
 import net.noah.mccourse.MCCourseMod;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.util.Identifier;
-import net.noah.mccourse.item.custom.DowsingRodItem;
-import net.noah.mccourse.item.custom.ModAxeItem;
-import net.noah.mccourse.item.custom.ModHoeItem;
-import net.noah.mccourse.item.custom.ModPickaxeItem;
+import net.noah.mccourse.item.custom.*;
 
 public class ModItems {
 
@@ -51,6 +48,10 @@ public class ModItems {
 
     public static final Item ORICHALCUM_SWORD = registerItem("orichalcum_sword",
             new SwordItem(ModToolMaterial.ORICHALCUM, 5, 4f,
+                    new FabricItemSettings().group(ModItemGroups.COURSE)));
+
+    public static final Item ORICHALCUM_PAXEL = registerItem("orichalcum_paxel",
+            new ModPaxelItem(ModToolMaterial.ORICHALCUM, 1, 1f,
                     new FabricItemSettings().group(ModItemGroups.COURSE)));
 
 

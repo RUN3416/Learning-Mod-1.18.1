@@ -13,6 +13,9 @@ public class ModTags {
         public static final Tag.Identified<Block> DOWSING_ROD_DETECTABLE_BLOCKS =
                 createTag("dowsing_rod_detectable_blocks");
 
+        public static final Tag.Identified<Block> PAXEL_MINEABLE =
+                createTag("mineable/paxel");
+
         public static final Tag.Identified<Block> ORICHALCUM_BLOCKS =
                 createCommonTag("orichalcum_blocks");
 
