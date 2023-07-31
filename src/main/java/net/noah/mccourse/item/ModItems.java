@@ -74,6 +74,11 @@ public class ModItems {
             new ArmorItem(ModArmorMaterials.ORICHALCUM, EquipmentSlot.FEET,
                     new FabricItemSettings().group(ModItemGroups.COURSE)));
 
+    // HORSE ARMOR
+    public static final Item ORICHALCUM_HORSE_ARMOR = registerItem("orichalcum_horse_armor",
+            new HorseArmorItem(15, "orichalcum",
+                    new FabricItemSettings().group(ModItemGroups.COURSE)));
+
 
 
 
