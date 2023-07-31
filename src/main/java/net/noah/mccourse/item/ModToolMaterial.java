@@ -9,7 +9,7 @@ import java.util.function.Supplier;
 
 public enum ModToolMaterial implements ToolMaterial {
 
-    ORICHALCUM(MiningLevels.IRON, 450, 4.5F, 3.5F, 25, () ->
+    ORICHALCUM(MiningLevels.IRON, 450, 8F, 3.5F, 25, () ->
         Ingredient.ofItems(ModItems.ORICHALCUM_INGOT));
 
     private final int miningLevel;
