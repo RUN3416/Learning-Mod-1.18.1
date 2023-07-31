@@ -47,7 +47,7 @@ public class ModItems {
                     new FabricItemSettings().group(ModItemGroups.COURSE)));
 
     public static final Item ORICHALCUM_SWORD = registerItem("orichalcum_sword",
-            new SwordItem(ModToolMaterial.ORICHALCUM, 5, 4f,
+            new ModSlowingSwordItem(ModToolMaterial.ORICHALCUM, 5, 4f,
                     new FabricItemSettings().group(ModItemGroups.COURSE)));
 
     public static final Item ORICHALCUM_PAXEL = registerItem("orichalcum_paxel",
