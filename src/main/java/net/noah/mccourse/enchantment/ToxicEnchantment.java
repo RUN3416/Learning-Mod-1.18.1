@@ -33,11 +33,17 @@ public class ToxicEnchantment extends Enchantment {
                 ((LivingEntity) target).addStatusEffect(new
                         StatusEffectInstance(StatusEffects.POISON, 200, 7, false, false, true), player);
             }
+
+            // Still Deciding if Too OP
+            if(level == 3) {
+                ((LivingEntity) target).addStatusEffect(new
+                        StatusEffectInstance(StatusEffects.POISON, 200, 20, false, false, true), player);
+            }
         }
     }
 
     @Override
     public int getMaxLevel() {
-        return 2;
+        return 3;
     }
 }
