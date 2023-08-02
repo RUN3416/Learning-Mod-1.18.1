@@ -40,5 +40,7 @@
   "item.mccourse.dowsing_rod.tooltip.shift": "Right Click to find valuables",
   "item.mccourse.dowsing_rod.tooltip": "Press §eSHIFT§r for more Information",
 
-  "enchantment.mccourse.lightning_striker": "Lighting Striker"
+  "enchantment.mccourse.lightning_striker": "Lighting Striker",
+  "enchantment.mccourse.freeze": "Freeze",
+  "enchantment.mccourse.toxic": "Toxic"
 }

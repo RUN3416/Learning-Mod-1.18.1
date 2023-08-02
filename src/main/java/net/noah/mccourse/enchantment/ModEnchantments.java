@@ -12,7 +12,12 @@ public class ModEnchantments {
     public static Enchantment LIGHTNING_STRIKER = register("lightning_striker",
             new LightningStrikerEnchantment(Enchantment.Rarity.UNCOMMON,
                     EnchantmentTarget.WEAPON, EquipmentSlot.MAINHAND));
-
+    public static Enchantment FREEZE = register("freeze",
+            new FreezeEnchantment(Enchantment.Rarity.UNCOMMON,
+                    EnchantmentTarget.WEAPON, EquipmentSlot.MAINHAND));
+    public static Enchantment TOXIC = register("toxic",
+            new ToxicEnchantment(Enchantment.Rarity.UNCOMMON,
+                    EnchantmentTarget.WEAPON, EquipmentSlot.MAINHAND));
 
     private static Enchantment register(String name, Enchantment enchantment) {
         return Registry.register(Registry.ENCHANTMENT, new Identifier(MCCourseMod.MOD_ID, name), enchantment);
