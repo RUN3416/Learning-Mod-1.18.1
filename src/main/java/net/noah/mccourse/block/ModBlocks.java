@@ -14,9 +14,11 @@ import net.noah.mccourse.item.ModItemGroups;
 
 public class ModBlocks {
 
+    // BLOCK
     public static final Block ORICHALCUM_BLOCK = registerBlock("orichalcum_block",
             new Block(FabricBlockSettings.of(Material.METAL).strength(6f).requiresTool()), ModItemGroups.COURSE);
 
+    // ORES
     public static final Block ORICHALCUM_ORE = registerBlock("orichalcum_ore",
             new Block(FabricBlockSettings.of(Material.STONE).strength(4.0f).requiresTool()), ModItemGroups.COURSE);
 
@@ -26,9 +28,11 @@ public class ModBlocks {
     public static final Block RAW_ORICHALCUM_BLOCK = registerBlock("raw_orichalcum_block",
             new Block(FabricBlockSettings.of(Material.STONE).strength(4.0f).requiresTool()), ModItemGroups.COURSE);
 
+    // SPEEDY BLOCK
     public static final Block SPEEDY_BLOCK = registerBlock("speedy_block",
             new SpeedyBlock(FabricBlockSettings.of(Material.STONE).strength(4.0f).requiresTool()), ModItemGroups.COURSE);
 
+    // STAIRS AND SLABS
     public static final Block ORICHALCUM_STAIRS = registerBlock("orichalcum_stairs",
             new ModStairsBlock(ModBlocks.ORICHALCUM_BLOCK.getDefaultState(),
                     FabricBlockSettings.of(Material.METAL).strength(4.0f).requiresTool()), ModItemGroups.COURSE);
@@ -36,6 +40,7 @@ public class ModBlocks {
     public static final Block ORICHALCUM_SLAB = registerBlock("orichalcum_slab",
             new SlabBlock(FabricBlockSettings.of(Material.METAL).strength(4.0f).requiresTool()), ModItemGroups.COURSE);
 
+    // BUTTONS AND PRESSURE PLATES
     public static final Block ORICHALCUM_BUTTON = registerBlock("orichalcum_button",
             new ModStoneButtonBlock(FabricBlockSettings.of(Material.METAL).strength(4.0f).requiresTool()), ModItemGroups.COURSE);
 
@@ -43,6 +48,7 @@ public class ModBlocks {
             new ModPressurePlateBlock(PressurePlateBlock.ActivationRule.EVERYTHING,
                     FabricBlockSettings.of(Material.METAL).strength(4.0f).requiresTool()), ModItemGroups.COURSE);
 
+    // FENCES AND WALLS
     public static final Block ORICHALCUM_FENCE = registerBlock("orichalcum_fence",
             new FenceBlock(FabricBlockSettings.of(Material.METAL).strength(4.0f).requiresTool()), ModItemGroups.COURSE);
 
@@ -52,13 +58,18 @@ public class ModBlocks {
     public static final Block ORICHALCUM_WALL = registerBlock("orichalcum_wall",
             new WallBlock(FabricBlockSettings.of(Material.METAL).strength(4.0f).requiresTool()), ModItemGroups.COURSE);
 
+    // DOORS
     public static final Block CHERRY_BLOSSOM_DOOR = registerBlock("cherry_blossom_door",
             new ModDoorBlock(FabricBlockSettings.of(Material.WOOD).strength(4.0f).requiresTool().nonOpaque()), ModItemGroups.COURSE);
 
     public static final Block CHERRY_BLOSSOM_TRAPDOOR = registerBlock("cherry_blossom_trapdoor",
             new ModTrapdoorBlock(FabricBlockSettings.of(Material.WOOD).strength(4.0f).requiresTool().nonOpaque()), ModItemGroups.COURSE);
 
-
+    // LAMP
+    public static final Block ORICHALCUM_LAMP = registerBlock("orichalcum_lamp",
+            new OrichalcumLampBlock(FabricBlockSettings.of(Material.METAL).strength(4.0f).requiresTool()
+                    .luminance((state -> state.get(OrichalcumLampBlock.CLICKED) ? 15 : 0))),
+            ModItemGroups.COURSE);
 
 
 
