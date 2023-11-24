@@ -3,6 +3,7 @@
 	"package": "net.noah.mccourse.mixin",
 	"compatibilityLevel": "JAVA_17",
 	"mixins": [
+		"ModEntityDataSaver",
 		"ExampleMixin"
 	],
 	"injectors": {
