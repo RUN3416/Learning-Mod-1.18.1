@@ -72,7 +72,15 @@ public class ModBlocks {
             ModItemGroups.COURSE);
 
 
+    public static final Block TURNIP_CROP = registerBlockWithoutBlockItem("turnip_crop",
+            new ModTurnipBlock(FabricBlockSettings.copy(Blocks.BEETROOTS)));
 
+
+
+
+    private static Block registerBlockWithoutBlockItem(String name, Block block) {
+        return Registry.register(Registry.BLOCK, new Identifier(MCCourseMod.MOD_ID, name), block);
+    }
 
     private static Block registerBlock(String name, Block block, ItemGroup group) {
         registerBlockItem(name, block, group);

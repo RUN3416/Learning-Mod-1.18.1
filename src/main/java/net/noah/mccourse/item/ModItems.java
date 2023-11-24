@@ -6,6 +6,7 @@ import net.minecraft.item.*;
 import net.noah.mccourse.MCCourseMod;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.util.Identifier;
+import net.noah.mccourse.block.ModBlocks;
 import net.noah.mccourse.item.custom.*;
 
 public class ModItems {
@@ -82,6 +83,11 @@ public class ModItems {
     // DATA TABLET
     public static final Item DATA_TABLET = registerItem("data_tablet",
             new DataTabletItem(new FabricItemSettings().group(ModItemGroups.COURSE).maxCount(1)));
+
+    // TURNIP SEED
+    public static final Item TURNIP_SEEDS = registerItem("turnip_seeds",
+            new AliasedBlockItem(ModBlocks.TURNIP_CROP,
+                    new FabricItemSettings().group(ModItemGroups.COURSE)));
 
 
 
