@@ -3,6 +3,7 @@ package net.noah.mccourse.block;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.*;
+import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
@@ -71,10 +72,13 @@ public class ModBlocks {
                     .luminance((state -> state.get(OrichalcumLampBlock.CLICKED) ? 15 : 0))),
             ModItemGroups.COURSE);
 
-
+    // TURNIP
     public static final Block TURNIP_CROP = registerBlockWithoutBlockItem("turnip_crop",
             new ModTurnipBlock(FabricBlockSettings.copy(Blocks.BEETROOTS)));
 
+    // FLOWER
+    public static final Block PINK_ROSE = registerBlock("pink_rose",
+            new FlowerBlock(StatusEffects.GLOWING, 8, FabricBlockSettings.copy(Blocks.PINK_TULIP)), ModItemGroups.COURSE);
 
 
 
