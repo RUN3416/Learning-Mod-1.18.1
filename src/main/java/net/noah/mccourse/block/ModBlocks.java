@@ -12,6 +12,7 @@ import net.minecraft.util.registry.Registry;
 import net.noah.mccourse.MCCourseMod;
 import net.noah.mccourse.block.custom.*;
 import net.noah.mccourse.item.ModItemGroups;
+import net.noah.mccourse.sound.ModSounds;
 
 public class ModBlocks {
 
@@ -69,8 +70,8 @@ public class ModBlocks {
     // LAMP
     public static final Block ORICHALCUM_LAMP = registerBlock("orichalcum_lamp",
             new OrichalcumLampBlock(FabricBlockSettings.of(Material.METAL).strength(4.0f).requiresTool()
-                    .luminance((state -> state.get(OrichalcumLampBlock.CLICKED) ? 15 : 0))),
-            ModItemGroups.COURSE);
+                    .luminance((state) -> state.get(OrichalcumLampBlock.CLICKED) ? 15 : 0)
+                    .sounds(ModSounds.ORICHALCUM_SOUNDS)), ModItemGroups.COURSE);
 
     // TURNIP
     public static final Block TURNIP_CROP = registerBlockWithoutBlockItem("turnip_crop",
