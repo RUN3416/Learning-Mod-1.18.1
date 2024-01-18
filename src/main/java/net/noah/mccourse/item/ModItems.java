@@ -8,6 +8,7 @@ import net.minecraft.util.registry.Registry;
 import net.minecraft.util.Identifier;
 import net.noah.mccourse.block.ModBlocks;
 import net.noah.mccourse.item.custom.*;
+import net.noah.mccourse.sound.ModSounds;
 
 public class ModItems {
 
@@ -88,6 +89,11 @@ public class ModItems {
     public static final Item TURNIP_SEEDS = registerItem("turnip_seeds",
             new AliasedBlockItem(ModBlocks.TURNIP_CROP,
                     new FabricItemSettings().group(ModItemGroups.COURSE)));
+
+    // MUSIC DISC
+    public static final Item BAR_BRAWL_MUSIC_DISC = registerItem("bar_brawl_music_disc",
+            new ModMusicDiscItem(9, ModSounds.BAR_BRAWL,
+                    new FabricItemSettings().group(ModItemGroups.COURSE).maxCount(1)));
 
 
 
