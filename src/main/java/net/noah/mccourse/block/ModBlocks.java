@@ -85,6 +85,10 @@ public class ModBlocks {
     public static final Block POTTED_PINK_ROSE = registerBlockWithoutBlockItem("potted_pink_rose",
             new FlowerPotBlock(ModBlocks.PINK_ROSE, FabricBlockSettings.copy(Blocks.POTTED_ALLIUM)));
 
+    // BLASTER
+    public static final Block ORICHALCUM_BLASTER = registerBlock("orichalcum_blaster",
+            new OrichalcumBlasterBlock(FabricBlockSettings.of(Material.METAL).nonOpaque()), ModItemGroups.COURSE);
+
 
     private static Block registerBlockWithoutBlockItem(String name, Block block) {
         return Registry.register(Registry.BLOCK, new Identifier(MCCourseMod.MOD_ID, name), block);
