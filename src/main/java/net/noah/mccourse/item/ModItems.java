@@ -95,6 +95,9 @@ public class ModItems {
             new ModMusicDiscItem(9, ModSounds.BAR_BRAWL,
                     new FabricItemSettings().group(ModItemGroups.COURSE).maxCount(1)));
 
+    // ORICHALCUM STAFF
+    public static final Item ORICHALCUM_STAFF = registerItem("orichalcum_staff",
+            new Item(new FabricItemSettings().group(ModItemGroups.COURSE).maxCount(1)));
 
 
 
