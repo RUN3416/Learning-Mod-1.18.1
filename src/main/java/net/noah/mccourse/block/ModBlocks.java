@@ -11,6 +11,7 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 import net.noah.mccourse.MCCourseMod;
 import net.noah.mccourse.block.custom.*;
+import net.noah.mccourse.fluid.ModFluids;
 import net.noah.mccourse.item.ModItemGroups;
 import net.noah.mccourse.sound.ModSounds;
 
@@ -89,6 +90,10 @@ public class ModBlocks {
     public static final Block ORICHALCUM_BLASTER = registerBlock("orichalcum_blaster",
             new OrichalcumBlasterBlock(FabricBlockSettings.of(Material.METAL).nonOpaque()), ModItemGroups.COURSE);
 
+    // HONEY FLUID BLOCK
+    public static final Block HONEY_FLUID_BLOCK = registerBlockWithoutBlockItem("honey_fluid_block",
+            new ModFluidBlock(ModFluids.HONEY_STILL, FabricBlockSettings.of(Material.WATER)
+                    .noCollision().nonOpaque().dropsNothing()));
 
     private static Block registerBlockWithoutBlockItem(String name, Block block) {
         return Registry.register(Registry.BLOCK, new Identifier(MCCourseMod.MOD_ID, name), block);

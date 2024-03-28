@@ -7,6 +7,7 @@ import net.noah.mccourse.MCCourseMod;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.util.Identifier;
 import net.noah.mccourse.block.ModBlocks;
+import net.noah.mccourse.fluid.ModFluids;
 import net.noah.mccourse.item.custom.*;
 import net.noah.mccourse.sound.ModSounds;
 
@@ -103,6 +104,9 @@ public class ModItems {
     public static final Item ORICHALCUM_BOW = registerItem("orichalcum_bow",
             new BowItem(new FabricItemSettings().group(ModItemGroups.COURSE).maxCount(1)));
 
+    // BUCKET OF HONEY
+    public static final Item HONEY_BUCKET = registerItem("honey_bucket",
+            new BucketItem(ModFluids.HONEY_STILL, new FabricItemSettings().group(ModItemGroups.COURSE).maxCount(1)));
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registry.ITEM, new Identifier(MCCourseMod.MOD_ID, name), item);
