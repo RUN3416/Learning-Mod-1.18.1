@@ -3,6 +3,7 @@ package net.noah.mccourse;
 import net.fabricmc.api.ModInitializer;
 
 import net.noah.mccourse.block.ModBlocks;
+import net.noah.mccourse.block.entity.ModBlockEntities;
 import net.noah.mccourse.enchantment.ModEnchantments;
 import net.noah.mccourse.item.ModItems;
 import net.noah.mccourse.painting.ModPaintings;
@@ -20,6 +21,8 @@ public class MCCourseMod implements ModInitializer {
 	public void onInitialize() {
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
+
+		ModBlockEntities.registerAllEntities();
 
 		ModEnchantments.registerModEnchantments();
 
