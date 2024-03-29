@@ -5,6 +5,7 @@ import net.fabricmc.api.ModInitializer;
 import net.noah.mccourse.block.ModBlocks;
 import net.noah.mccourse.enchantment.ModEnchantments;
 import net.noah.mccourse.item.ModItems;
+import net.noah.mccourse.painting.ModPaintings;
 import net.noah.mccourse.util.ModLootTableModifiers;
 import net.noah.mccourse.util.ModRegistries;
 import org.slf4j.Logger;
@@ -25,6 +26,7 @@ public class MCCourseMod implements ModInitializer {
 		ModLootTableModifiers.modifyLootTables();
 
 		ModRegistries.registerModStuffs();
+		ModPaintings.registerPaintings();
 
 
 	}
