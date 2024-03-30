@@ -7,6 +7,7 @@ import net.noah.mccourse.block.entity.ModBlockEntities;
 import net.noah.mccourse.enchantment.ModEnchantments;
 import net.noah.mccourse.item.ModItems;
 import net.noah.mccourse.painting.ModPaintings;
+import net.noah.mccourse.recipe.ModRecipes;
 import net.noah.mccourse.util.ModLootTableModifiers;
 import net.noah.mccourse.util.ModRegistries;
 import org.slf4j.Logger;
@@ -27,6 +28,8 @@ public class MCCourseMod implements ModInitializer {
 		ModEnchantments.registerModEnchantments();
 
 		ModLootTableModifiers.modifyLootTables();
+
+		ModRecipes.register();
 
 		ModRegistries.registerModStuffs();
 		ModPaintings.registerPaintings();
