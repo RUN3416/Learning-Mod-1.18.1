@@ -23,7 +23,8 @@
   "item.mccourse.orichalcum_staff": "Orichalcum Staff",
   "item.mccourse.orichalcum_bow": "Orichalcum Bow",
   "item.mccourse.honey_bucket": "Bucket of Honey",
-  "block.mccourse.cherry_blossom_sign": "Cherry Blossom Sign",
+
+  "item.mccourse.cherry_blossom_sign": "Cherry Blossom Sign",
 
   "block.mccourse.orichalcum_block": "Orichalcum Block",
   "block.mccourse.orichalcum_ore": "Orichalcum Ore",
@@ -50,6 +51,9 @@
   "block.mccourse.stripped_cherry_blossom_log": "Stripped Cherry Blossom Log",
   "block.mccourse.stripped_cherry_blossom_wood": "Stripped Cherry Blossom Wood",
   "block.mccourse.cherry_blossom_planks": "Cherry Blossom Planks",
+  "block.mccourse.cherry_blossom_sign": "Cherry Blossom Sign",
+  "block.mccourse.cherry_blossom_leaves": "Cherry Blossom Leaves",
+  "block.mccourse.cherry_blossom_sapling": "Cherry Blossom Sapling",
 
   "item.mccourse.bar_brawl_music_disc": "Bar Brawl Music Disc",
   "item.mccourse.bar_brawl_music_disc.desc": "Bryan Tech - Bar Brawl (CC0)",

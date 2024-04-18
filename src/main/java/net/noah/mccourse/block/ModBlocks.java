@@ -14,6 +14,7 @@ import net.noah.mccourse.block.custom.*;
 import net.noah.mccourse.fluid.ModFluids;
 import net.noah.mccourse.item.ModItemGroups;
 import net.noah.mccourse.sound.ModSounds;
+import net.noah.mccourse.world.feature.tree.CherryBlossomSaplingGenerator;
 
 public class ModBlocks {
 
@@ -115,6 +116,12 @@ public class ModBlocks {
 
     public static final Block CHERRY_BLOSSOM_SIGN_BLOCK = registerBlockWithoutBlockItem("cherry_blossom_sign_block",
             new SignBlock(FabricBlockSettings.copy(Blocks.OAK_PLANKS), ModSignTypes.CHERRY_BLOSSOM));
+
+    public static final Block CHERRY_BLOSSOM_LEAVES = registerBlock("cherry_blossom_leaves",
+            new LeavesBlock(FabricBlockSettings.copy(Blocks.OAK_LEAVES)), ModItemGroups.COURSE);
+
+    public static final Block CHERRY_BLOSSOM_SAPLING = registerBlock("cherry_blossom_sapling",
+            new ModSaplingBlock(new CherryBlossomSaplingGenerator(), FabricBlockSettings.copy(Blocks.OAK_SAPLING)), ModItemGroups.COURSE);
 
 
     private static Block registerBlockWithoutBlockItem(String name, Block block) {

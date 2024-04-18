@@ -10,6 +10,7 @@ import net.noah.mccourse.painting.ModPaintings;
 import net.noah.mccourse.recipe.ModRecipes;
 import net.noah.mccourse.util.ModLootTableModifiers;
 import net.noah.mccourse.util.ModRegistries;
+import net.noah.mccourse.world.feature.ModConfiguredFeatures;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -20,6 +21,8 @@ public class MCCourseMod implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
+		ModConfiguredFeatures.registerConfiguredFeatures();
+
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
 
